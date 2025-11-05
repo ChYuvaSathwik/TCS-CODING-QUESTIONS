@@ -1,0 +1,28 @@
+from bisect import bisect_right
+
+class Solution:
+    def countElements(self, a, b, n, query, q):
+        b.sort()  # Sort b once
+        X = []
+        for i in query:
+            # bisect_right returns index where a[i] would fit in b to keep it sorted
+            # All elements before this index are <= a[i]
+            count1 = bisect_right(b, a[i])
+            X.append(count1)
+        return X
+
+
+"""#User function Template for python3
+class Solution:
+    def countElements(self, a, b, n, query, q):
+        X=[]
+        b.sort()
+        for i in query:
+            count1=0
+            for m in range(len(b)):
+                if a[i]>=b[m]:
+                    count1=count1+1
+            X.append(count1)
+        return X""" this will pass take too much time and does not pass last 20 cases out of 1030
+            
+                    
