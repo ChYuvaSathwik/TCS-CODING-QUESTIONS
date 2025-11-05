@@ -1,0 +1,13 @@
+class Solution:
+    def Rearrange(self, n : int, arr : List[int]) -> None:
+        pos=[]
+        neg=[]
+        for i in range(len(arr)):
+            if arr[i]<0:
+                neg.append(arr[i])
+            else:
+                pos.append(arr[i])
+        G=neg+pos
+        arr[:]=G
+        return arr
+        
