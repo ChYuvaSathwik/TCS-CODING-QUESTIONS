@@ -1,0 +1,11 @@
+class Solution:
+    def majorityElement(self, arr):
+        sathwik=len(arr)//2
+        balu={}
+        for i in arr:
+            balu[i]=balu.get(i,0)+1
+        for k in balu:
+            if balu[k]>sathwik:
+                return k
+        else:
+            return -1
