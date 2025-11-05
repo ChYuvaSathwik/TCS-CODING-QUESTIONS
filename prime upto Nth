@@ -1,0 +1,13 @@
+def prime_number(N):
+    sathwik=[]
+    for i in range(2,N+1):
+        M=True
+        for j in range(2,int(i**0.5)+1):
+            if i%j==0:
+                M=False
+                break
+        if M:
+            sathwik.append(i)
+    return sathwik
+N=int(input())
+print(prime_number(N))
