@@ -1,0 +1,12 @@
+N =[1,2,5,7,4]
+count1=0
+k=2
+sathwik=set()
+for i in range(len(N)):
+    for j in range(i+1,len(N)):
+        NEW=(N[i],N[j])
+        if NEW not in sathwik:
+            if (N[i]+N[j])%k==0:
+                count1=count1+1
+                sathwik.add(NEW)
+print(count1)
