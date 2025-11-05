@@ -1,0 +1,8 @@
+A=[12,45,678,5]
+B=[12,678]
+A_1=set(A)
+B_1=set(B)
+if B_1.issubset(A_1):
+    print("it is subset")
+else:
+    print("No")
