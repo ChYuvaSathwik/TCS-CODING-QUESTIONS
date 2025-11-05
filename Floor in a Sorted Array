@@ -1,0 +1,10 @@
+class Solution:
+    def findFloor(self, arr, x):
+        sathwik=[]
+        for i in range(len(arr)):
+            if arr[i]<=x:
+                sathwik.append(i)
+        if sathwik:
+            return sathwik[-1]
+        else:
+            return -1
