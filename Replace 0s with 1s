@@ -1,0 +1,19 @@
+def replace(sathwik):
+    sathwik=str(sathwik)
+    Praneeth=list(sathwik)
+    for i in range(len(Praneeth)):
+        if Praneeth[i]=="0":
+            Praneeth[i]="1"
+    Dk="".join(Praneeth)
+    return int(Dk)
+sathwik=int(input())
+print(replace(sathwik))
+
+"""
+def replace(sathwik):
+    return sathwik.replace("0", "1")  
+
+sathwik = input()  
+print(replace(sathwik))
+
+"""
