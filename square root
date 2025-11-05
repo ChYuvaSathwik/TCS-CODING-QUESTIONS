@@ -1,0 +1,5 @@
+def square_root(N):
+    A=int(N**0.5)
+    return A
+N=int(input())
+print(square_root(N))
