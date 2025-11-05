@@ -1,0 +1,19 @@
+1️⃣ Binary → Decimal
+binary = "1010"
+decimal = int(binary, 2)
+print(decimal)   # Output: 10
+
+2️⃣ Decimal → Binary
+decimal = 10
+binary = bin(decimal)[2:]
+print(binary)    # Output: 1010
+
+3️⃣ Binary → Octal
+binary = "1010"
+octal = oct(int(binary, 2))[2:]
+print(octal)     # Output: 12
+
+4️⃣ Octal → Binary
+octal = "12"
+binary = bin(int(octal, 8))[2:]
+print(binary)    # Output: 1010
