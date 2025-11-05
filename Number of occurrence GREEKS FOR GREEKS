@@ -1,0 +1,11 @@
+class Solution:
+    def countFreq(self, arr, target):
+        balu={}
+        bn=[]
+        for i in arr:
+            balu[i]=balu.get(i,0)+1
+        for h in balu:
+            if h==target:
+                return balu[h]
+        else:
+            return 0
