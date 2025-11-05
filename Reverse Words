@@ -1,0 +1,11 @@
+A="..geeks..for.geeks."
+M=A.split(".")
+V=[]
+BH=[]
+for i in M:
+    if i.isalpha():
+        V.extend([i,"."])
+for j in range(len(V)-1,-1,-1):
+    BH.append(V[j])
+DF="".join(BH)
+print(DF[1:])
