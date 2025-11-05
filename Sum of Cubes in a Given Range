@@ -1,0 +1,7 @@
+def sum_cubes(left,right):
+    sum1=0
+    for i in range(left,right+1):
+        sum1=sum1+(i**3)
+    return sum1
+left,right=map(int,input().split())
+print(sum_cubes(left,right))
