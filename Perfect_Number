@@ -1,0 +1,11 @@
+def perfect_number(N):
+    F=[]
+    for i in range(1,N):
+        if N%i==0:
+            F.append(i)
+    if sum(F)==N:
+        return "PERFECT NUMBER"
+    else:
+        return "NOT PERFECT NUMBER"
+N=int(input())
+print(perfect_number(N))
