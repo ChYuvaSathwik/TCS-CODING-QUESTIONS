@@ -1,0 +1,17 @@
+def digit_prime_check(N):
+    sathwik=str(N)
+    Praneeth = True
+    for i in range(len(sathwik)):
+
+        M=int(sathwik[i])
+        if M<2:
+            return "not prime"
+        else:
+            for j in range(2,int(M**0.5)+1):
+                if M%j==0:
+                    Praneeth=False
+                    return "not prime"
+    if Praneeth:
+        return "YES IT IS PRIME"
+N=int(input())
+print(digit_prime_check(N))
