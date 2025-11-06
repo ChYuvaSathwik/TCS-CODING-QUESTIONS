@@ -1,0 +1,11 @@
+s ="abbaabmadamc"
+count1=0
+palindrom=""
+for i in range(len(s)):
+    for j in range(i,len(s)):
+        sathwik=s[i:j+1]
+        if sathwik==sathwik[::-1]:
+            if len(sathwik)>count1:
+                count1=len(sathwik)
+                palindrom=sathwik
+print(palindrom)
