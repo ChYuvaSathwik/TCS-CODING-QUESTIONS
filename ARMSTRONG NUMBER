@@ -1,0 +1,12 @@
+def armstrong(number):
+    M=str(number)
+    sathwik=len(M)
+    count1=0
+    for i in M:
+        count1=count1+int(i)**sathwik
+    if count1==number:
+        return "ARMSTRONG"
+    else:
+        return "NOT ARMSTRONG"
+number=int(input())
+print(armstrong(number))
