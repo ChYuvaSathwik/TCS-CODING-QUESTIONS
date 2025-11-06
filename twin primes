@@ -1,0 +1,17 @@
+def twin_primes(N):
+    sathwik=[]
+    Balu=[]
+    for i in range(2,N+1):
+        Praneeth=True
+        for j in range(2,int(i**0.5)+1):
+            if i%j==0:
+                Praneeth=False
+                break
+        if Praneeth:
+            sathwik.append(i)
+    for h in range(1,len(sathwik)-1):
+        if sathwik[h]-sathwik[h-1]==2:
+            Balu.append((sathwik[h-1],sathwik[h]))
+    return Balu
+N=int(input())
+print(twin_primes(N))
