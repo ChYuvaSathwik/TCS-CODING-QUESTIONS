@@ -1,0 +1,15 @@
+A=[10,2,45,243,75,2]
+sathwik=[]
+for i in range(len(A)):
+    M=False
+    for j in range(i+1,len(A)):
+        if A[i]<A[j]:
+            M=True
+            break
+    if M:
+        sathwik.append(A[j])
+    else:
+        sathwik.append(-1)
+print(sathwik)
+
+"""IN FUTURE I WILL DO WITH STACK"""
