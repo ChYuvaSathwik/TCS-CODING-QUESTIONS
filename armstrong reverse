@@ -1,0 +1,12 @@
+def armstrong_reverse(N):
+    sathwik=str(N)[::-1]
+    V=len(sathwik)
+    count1=0
+    for i in sathwik:
+        count1=count1+int(i)**V
+    if count1==sathwik:
+        return "ARMSTRONG"
+    else:
+        return "NOT ARMSTRONG"
+N=int(input())
+print(armstrong_reverse(N))
