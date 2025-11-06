@@ -1,0 +1,6 @@
+A="adashgysghxggaysu"
+sathwik={}
+for i in A:
+    sathwik[i]=sathwik.get(i,0)+1
+max_char=max(sathwik,key=sathwik.get)
+print(max_char,sathwik[max_char])
