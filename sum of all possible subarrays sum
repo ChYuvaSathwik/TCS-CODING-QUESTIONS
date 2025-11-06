@@ -1,0 +1,11 @@
+sathwik=[1,2,3]
+sum1=0
+Praneeth=[]
+for i in range(len(sathwik)):
+    for j in range(i+1,len(sathwik)+1):
+        balu=sathwik[i:j]
+        Praneeth.append(balu)
+for h in Praneeth:
+    for j in h:
+        sum1=sum1+j
+print(sum1)
