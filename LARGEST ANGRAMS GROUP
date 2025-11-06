@@ -1,0 +1,20 @@
+
+words = ["listen", "silent", "enlist", "hello", "below", "elbow"]
+
+output=["listen", "silent", "enlist"]
+
+anagram_groups = {}
+
+for word in words:
+
+    sorted_word = ''.join(sorted(word))
+    
+
+    if sorted_word in anagram_groups:
+        anagram_groups[sorted_word].append(word)
+    else:
+        anagram_groups[sorted_word] = [word]
+
+largest_group = max(anagram_groups.values(), key=len)
+
+print("Largest Anagram Group:", largest_group)
