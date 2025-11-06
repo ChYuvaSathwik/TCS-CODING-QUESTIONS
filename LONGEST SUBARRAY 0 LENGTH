@@ -1,0 +1,13 @@
+A = [1, -1, 3, 2, -2, -3, 3]
+
+max_len = 0 
+
+# Generate all subarrays
+for i in range(len(A)):
+    for j in range(i+1, len(A)+1):
+        subarray = A[i:j]
+        if sum(subarray) == 0:
+            if len(subarray) > max_len:
+                max_len = len(subarray)
+
+print("Length of Longest Zero-Sum Subarray:", max_len)
