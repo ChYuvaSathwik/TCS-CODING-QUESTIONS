@@ -1,0 +1,25 @@
+TCS-style Tricks with ASCII
+
+Check if character is uppercase or lowercase:
+
+c = 'G'
+if 65 <= ord(c) <= 90:
+    print("Uppercase")
+elif 97 <= ord(c) <= 122:
+    print("Lowercase")
+
+
+Convert lowercase to uppercase or vice versa:
+
+c = 'g'
+upper = chr(ord(c) - 32)  # 'G'
+
+c = 'G'
+lower = chr(ord(c) + 32)  # 'g'
+
+
+Check if character is digit:
+
+c = '7'
+if 48 <= ord(c) <= 57:
+    print("Digit")
