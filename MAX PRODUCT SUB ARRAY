@@ -1,0 +1,14 @@
+A = [2, 3, -2, 4]
+max_product = float('-inf')
+
+
+for i in range(len(A)):
+    for j in range(i+1, len(A)+1):
+        subarray = A[i:j]
+        product = 1
+        for num in subarray:
+            product *= num
+        if product > max_product:
+            max_product = product
+
+print("Maximum Product Subarray:", max_product)
