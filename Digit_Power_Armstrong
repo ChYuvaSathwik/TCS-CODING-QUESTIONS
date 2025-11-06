@@ -1,0 +1,14 @@
+def digit_power_armstrong(N):
+    sathwik=str(N)
+    count1=0
+    count2=0
+    for i in sathwik:
+        count1=count1+int(i)
+    for k in sathwik:
+        count2=count2+int(k)**count1
+    if count2==N:
+        return "ARMSTRONG"
+    else:
+        return "NOTARMSTRONG"
+N=int(input())
+print(digit_power_armstrong(N))
