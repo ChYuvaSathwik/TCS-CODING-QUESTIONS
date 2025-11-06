@@ -1,0 +1,12 @@
+def generate_binary_strings(n):
+    result = []
+    for num in range(2**n):
+        # Convert number to binary and pad with leading zeros to make length n
+        binary_str = bin(num)[2:].zfill(n)
+        # Check for consecutive 1's
+        if '11' not in binary_str:
+            result.append(binary_str)
+    return result
+
+n=int(input())
+print(generate_binary_strings(n))
