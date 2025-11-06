@@ -1,0 +1,9 @@
+sathwik="123"
+praneeth="234565"
+total=""
+b=min(len(sathwik),len(praneeth))
+for i in range(b):
+    total=total+sathwik[i]+praneeth[i]
+total=total+sathwik[b:]+praneeth[b:]
+print(total)
+
