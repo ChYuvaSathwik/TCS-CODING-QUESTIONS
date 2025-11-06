@@ -1,0 +1,18 @@
+A="abca"
+N="uiopabcqi"
+total=""
+seen=set()
+num=min(len(A),len(N))
+for i in range(num):
+    if A[i] not in seen:
+        total=total+A[i]
+        seen.add(A[i])
+    if N[i] not in seen:
+        total=total+N[i]
+        seen.add(N[i])
+final1=A[num:]+N[num:]
+for bk in final1:
+    if bk not in seen:
+        total=total+bk
+        seen.add(bk)
+print(total)
