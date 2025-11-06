@@ -1,0 +1,28 @@
+def element_wise_multiply(A, B, R, C):
+    result = []
+    for i in range(R):
+        row = []
+        for j in range(C):
+            row.append(A[i][j] * B[i][j])
+        result.append(row)
+
+    # Printing line by line inside function
+    for row in result:
+        print(*row)
+
+
+R, C = map(int, input().split())
+
+A = []
+B = []
+
+# Input matrix A
+for i in range(R):
+    A.append(list(map(int, input().split())))
+
+# Input matrix B
+for i in range(R):
+    B.append(list(map(int, input().split())))
+
+# Call function (No print())
+element_wise_multiply(A, B, R, C)
