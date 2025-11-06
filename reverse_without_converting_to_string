@@ -1,0 +1,14 @@
+def reverse_without_converting_to_string(N):
+    temp=N
+    K=[]
+    while N>0:
+        sathwik=N%10
+        K.append(sathwik)
+        N=N//10
+    if K[::-1]==K:
+        return "Palindrome"
+    else:
+        return "NOT Palindrome"
+N=int(input())
+L=reverse_without_converting_to_string(N)
+print(L)
