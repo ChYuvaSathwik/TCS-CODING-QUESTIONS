@@ -1,0 +1,28 @@
+def largest_prime(N):
+    sathwik=[]
+    for i in range(2,N):
+        M=True
+        for j in range(2,int(i**0.5)+1):
+            if i%j==0:
+                M=False
+                break
+        if M:
+            sathwik.append(i)
+    return max(sathwik)
+N=int(input())
+print(largest_prime(N))
+
+
+
+"""def largest_prime(N):
+    for i in range(N-1, 1, -1):  # start from N-1 down to 2
+        is_prime = True
+        for j in range(2, int(i**0.5)+1):
+            if i % j == 0:
+                is_prime = False
+                break
+        if is_prime:
+            return i  # stop immediately, we found the largest prime
+
+N = int(input())
+print(largest_prime(N))"""
