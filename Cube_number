@@ -1,0 +1,7 @@
+def cube_number(N,K):
+    count1=0
+    for i in range(N,K+1):
+        count1=count1+i**3
+    return count1
+N,K=map(int,input().split())
+print(cube_number(N,K))        
