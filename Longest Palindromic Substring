@@ -1,0 +1,11 @@
+s="babad"
+length=0
+praneeth=""
+for i in range(len(s)):
+    for j in range(i+1,len(s)+1):
+        sathwik=s[i:j]
+        if sathwik==sathwik[::-1]:
+            if len(sathwik)>len(praneeth):
+                praneeth=sathwik
+print(praneeth)
+
