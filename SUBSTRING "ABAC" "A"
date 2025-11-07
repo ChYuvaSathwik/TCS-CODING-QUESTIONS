@@ -1,0 +1,9 @@
+sathwik1="ABCDABCSAPLABCOABC"
+sathwik2="ABC"
+size=len(sathwik2)
+count1=0
+for i in range(len(sathwik1)-size+1):
+    balu=sathwik1[i:size+i]
+    if balu==sathwik2:
+        count1=count1+1
+print(count1)
