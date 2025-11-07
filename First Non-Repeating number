@@ -1,0 +1,9 @@
+A=1223247
+A=str(A)
+sathwik={}
+for i in A:
+    sathwik[i]=sathwik.get(i,0)+1
+for j in sathwik:
+    if sathwik[j]==1:
+        print(j)
+        break
