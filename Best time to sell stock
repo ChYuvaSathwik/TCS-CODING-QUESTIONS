@@ -1,0 +1,10 @@
+A=[1,5,2,6]
+B=[4,9,18,4]
+sathwik=A+B
+l=0
+min_price=float("inf")
+for i in sathwik:
+    min_price=min(min_price,i)
+    profit=i-min_price
+    l=max(l,profit)
+print(l)
