@@ -1,0 +1,29 @@
+n = int(input())  # number of entries
+
+sales = []
+for _ in range(n):
+    name, qty, price = input().split()
+    qty = int(qty)
+    price = float(price)
+    sales.append([name, qty, price])
+
+revenue_by_item = {}
+total_revenue = 0
+
+for name, qty, price in sales:
+    revenue = qty * price
+    total_revenue += revenue
+
+    if name in revenue_by_item:
+        revenue_by_item[name] += revenue
+    else:
+        revenue_by_item[name] = revenue
+
+# find item with max revenue
+most_sold_item = max(revenue_by_item, key=revenue_by_item.get)
+
+average_revenue = total_revenue / n
+
+print("Most Sold Item:", most_sold_item)
+print("Total Revenue: {:.2f}".format(total_revenue))
+print("Average Revenue Per Entry: {:.2f}".format(average_revenue))
