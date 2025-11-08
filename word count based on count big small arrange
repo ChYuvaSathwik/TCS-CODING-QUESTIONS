@@ -1,0 +1,16 @@
+sathwik="apple banana banana mango orange"
+sathwik=sathwik.split()
+Praneeth={}
+hi=[]
+hi2=[]
+for i in sathwik:
+    Praneeth[i]=Praneeth.get(i,0)+1
+M=sorted(Praneeth.items(),key=lambda x:x[1],reverse=False)
+M1=sorted(Praneeth.items(),key=lambda x:x[1],reverse=True)
+for name,count1 in M:
+    hi.append(name)
+
+for name2,count2 in M1:
+    hi2.append(name2)
+print(" ".join(hi))
+print(" ".join(hi2))
