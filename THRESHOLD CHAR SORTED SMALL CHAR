@@ -1,0 +1,13 @@
+def threshold_character(N,P):
+    sathwik={}
+    new_ch=[]
+    for i in N:
+        sathwik[i]=sathwik.get(i,0)+1
+    for j in sathwik:
+        if sathwik[j]>=P:
+            new_ch.append(j)
+    M=sorted(new_ch)
+    return M[0]
+N=input()
+P=int(input())
+print(threshold_character(N,P))
