@@ -1,0 +1,16 @@
+def possible_combinations(N):
+    sathwik=N.split()
+    Praneeth=sathwik[0]
+    Balu=Praneeth[1:]
+    New=[]
+    for i in range(len(Balu)):
+        for j in range(i+1,len(Balu)+1):
+            vick=Balu[i:j]
+            New.append(vick)
+    return ",".join(New)
+N=input()
+print(possible_combinations(N))
+
+
+
+"""hi bro"""
