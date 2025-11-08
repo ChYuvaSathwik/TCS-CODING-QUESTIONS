@@ -1,0 +1,11 @@
+S = "apple"
+Key = "eapl"
+Praneeth = {}
+M=""
+for i in S:
+    Praneeth[i]=Praneeth.get(i,0)+1
+for j in Key:
+    if j in Praneeth:
+        M=M+j*Praneeth[j]
+print(M)
+
