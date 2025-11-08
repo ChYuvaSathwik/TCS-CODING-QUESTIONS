@@ -1,0 +1,18 @@
+N=int(input())
+sathwik=[]
+Praneeth=[]
+for _ in range(N):
+    Name,Age,Grade,Gender=input().split()
+    Age=int(Age)
+    sathwik.append([Name,Age,Grade,Gender])
+for Name,Age,Grade,Gender in sathwik:
+    if Age>20:
+        print(Name)
+    if Gender=="Female":
+        avg=ord(Grade)
+        Praneeth.append(avg)
+avg_final=sum(Praneeth)/len(Praneeth)
+print(avg_final)
+
+
+"""hey bro hi any douts dm me """
