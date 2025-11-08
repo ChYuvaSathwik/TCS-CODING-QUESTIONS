@@ -1,0 +1,14 @@
+x = int(input())
+y = int(input())
+
+# nearest divisible on the lower side
+lower = (x // y) * y  
+
+# nearest divisible on the upper side
+upper = lower + y
+
+# check which is closer
+if abs(x - lower) <= abs(x - upper):
+    print(lower)
+else:
+    print(upper)
