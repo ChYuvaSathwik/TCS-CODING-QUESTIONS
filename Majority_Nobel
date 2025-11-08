@@ -1,0 +1,21 @@
+def nobel_votes(N):
+    sathwik=len(N)
+    Praneeth=sathwik//3
+    balu={}
+    MORE=[]
+    for i in N:
+        balu[i]=balu.get(i,0)+1
+    for j in balu:
+        if balu[j]>Praneeth:
+            MORE.append(j)
+    if MORE:
+        return MORE
+    else:
+        return 0
+
+N=list(map(int,input().split()))
+result=nobel_votes(N)
+if result==0:
+    print(0)
+else:
+    print(*result)
