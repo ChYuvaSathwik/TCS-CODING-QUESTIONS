@@ -1,0 +1,25 @@
+N=int(input())
+sathwik=[]
+Prince={}
+total_revinue=0
+for i in range(N):
+    Name,Qnt,Price=input().split()
+    Qnt=int(Qnt)
+    Price=float(Price)
+    sathwik.append([Name,Qnt,Price])
+
+for Name,Qnt,Price in sathwik:
+    revenue=Qnt*Price
+    total_revinue=total_revinue+revenue
+    if Name in Prince:
+        Prince[Name]=Prince[Name]+revenue
+    else:
+        Prince[Name]=revenue
+max_revenue_name=max(Prince,key=Prince.get)
+print(f"{max_revenue_name}")
+print(f"{total_revinue}")
+
+
+
+
+
