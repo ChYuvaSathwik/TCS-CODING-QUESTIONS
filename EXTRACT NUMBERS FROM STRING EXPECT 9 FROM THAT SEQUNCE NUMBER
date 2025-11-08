@@ -1,0 +1,18 @@
+sathwik="hello this is alpha 5051 and 9475 341"
+sathwik=sathwik.split()
+M=[]
+M1=[]
+new=[]
+for i in sathwik:
+    if not i.isalpha():
+        M.append(i)
+for k in M:
+    M1.append(k)
+for vb in M1:
+    if "9" not in vb:
+        new.append(vb)
+print(",".join(new))
+
+
+
+"""HI BRO IAM SATHWIK"""
