@@ -1,0 +1,14 @@
+def FizzBuzz(N):
+    B=[]
+    for i in N:
+        if i%3==0 and i%5==0:
+            B.append("ThreeFive")
+        elif i%5==0:
+            B.append("Five")
+        elif i%3==0:
+            B.append("Three")
+        else:
+            B.append(str(i))
+    return " ".join(B)
+N=list(map(int,input().split()))
+print(FizzBuzz(N))
