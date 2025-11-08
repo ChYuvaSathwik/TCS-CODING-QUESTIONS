@@ -1,0 +1,7 @@
+def school_tag(N,M):
+    Z=N*(N+1)//2
+    total=sum(M)
+    return Z-total
+N=int(input())
+M=list(map(int,input().split()))
+print(school_tag(N,M))
