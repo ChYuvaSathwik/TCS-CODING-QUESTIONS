@@ -1,0 +1,21 @@
+def factorial(N):
+    Praneeth=[]
+    sathwik=str(N)
+    result=0
+    for i in sathwik:
+        V=1
+        M=int(i)
+        V=1
+        for ty in range(1,M+1):
+            V=ty*V
+        Praneeth.append(V)
+    for g in Praneeth:
+        result=result+int(g)
+    if result==N:
+        return "Yes it is a relative blood number"
+    else:
+        return "it is not relative blood number"
+N=int(input())
+print(factorial(N))
+
+
