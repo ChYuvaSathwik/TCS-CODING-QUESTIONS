@@ -1,0 +1,14 @@
+def continues_subarray_target(N,target):
+    Praneeth=[]
+    for i in range(len(N)):
+        for j in range(i+1,len(N)+1):
+            sathwik=sum(N[i:j])
+
+            if sathwik==target:
+                Praneeth.append(N[i:j])
+    for h in Praneeth:
+        print(h)
+    return
+N=list(map(int,input().split()))
+target=int(input())
+continues_subarray_target(N,target)
