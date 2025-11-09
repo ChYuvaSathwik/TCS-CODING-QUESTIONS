@@ -1,0 +1,8 @@
+def max_product_any_three_numbers(N):
+    sathwik=sorted(N,reverse=True)
+    Product=1
+    for i in sathwik[:3]:
+        Product=Product*i
+    return Product
+N=list(map(int,input().split()))
+print(max_product_any_three_numbers(N))
