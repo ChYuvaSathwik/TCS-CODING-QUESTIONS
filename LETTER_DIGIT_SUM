@@ -1,0 +1,13 @@
+def letters_digits(N):
+    result=0
+    K=0
+    M = N.upper()
+    for i in M:
+        if i.isalpha():
+            sathwik=(ord(i)-ord("A")+1)
+            result=result+sathwik
+    for gh in str(result):
+        K=K+int(gh)
+    return K
+N=input()
+print(letters_digits(N))
