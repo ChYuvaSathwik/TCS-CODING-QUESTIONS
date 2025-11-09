@@ -1,0 +1,13 @@
+def frequnecy_replace_array(N):
+    sathwik={}
+    balu=[]
+    M=[]
+    for i in N:
+        sathwik[i]=sathwik.get(i,0)+1
+    for j in sathwik:
+        new=N.count(j)
+        for i in range(new):
+            M.append(sathwik[j])
+    return M
+N=list(map(int,input().split()))
+print(frequnecy_replace_array(N))
