@@ -1,0 +1,20 @@
+def Distinct(size,M):
+    count12=set()
+    Balu=[]
+    Praneeth={}
+    for i in range(len(M)):
+        result = 0
+        for j in range(i+1,len(M)+1):
+            sathwik=M[i:j]
+            for q in sathwik:
+                result=result|q
+                count12.add(result)
+    return len(count12)
+
+size=int(input())
+M=list(map(int,input().split()))
+print(Distinct(size,M))
+
+
+
+"""HI BRO"""
