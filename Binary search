@@ -1,0 +1,16 @@
+def binary_serach_target(N,Target):
+    N.sort()
+    high=len(N)-1
+    low=0
+
+    while low<=high:
+        mid = (low + high) // 2
+        if N[mid]==Target:
+            return mid
+        elif N[mid]<Target:
+            low=mid+1
+        else:
+            high=mid-1
+N=list(map(int,input().split()))
+Target=int(input())
+print(binary_serach_target(N,Target))
