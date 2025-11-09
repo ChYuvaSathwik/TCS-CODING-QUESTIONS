@@ -1,0 +1,19 @@
+def students(K,N):
+    sathwik=[]
+    for i in range(N):
+        Name,Mark=input().split()
+        Mark=int(Mark)
+        sathwik.append((Name,Mark))
+    New=sorted(sathwik,key=lambda x:x[1],reverse=True)
+    if N<K:
+        for h,j in New:
+            print(f"{h}:{j}")
+        return
+    else:
+        for i in range(len(New[:K])):
+            name,mark=New[i]
+            print(f"{name}:{mark}")
+        return
+
+K,N=map(int,input().split())
+students(K,N)
