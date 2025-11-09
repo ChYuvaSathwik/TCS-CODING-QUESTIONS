@@ -1,0 +1,29 @@
+
+def total_shipping_cost(weight, distance):
+    base_cost = 5.00
+    cost_per_kg = 2.00
+    cost_per_10km = 0.50
+
+    total = base_cost + (weight * cost_per_kg) + ((distance / 10) * cost_per_10km)
+    return f"${total:.2f}"
+
+weight, distance = map(float, input().split())
+print(total_shipping_cost(weight, distance))
+
+
+
+def total_shipping_cost(weight, distance):
+    base_cost = 5.00
+    cost_per_kg = 2.00
+    cost_per_10km = 0.50
+
+    total = base_cost + (weight * cost_per_kg) + ((distance / 10) * cost_per_10km)
+    return f"${total:.2f}"
+
+
+
+weight = int(input("Enter weight (in kg): "))
+distance = float(input("Enter distance (in km): "))
+
+print(total_shipping_cost(weight, distance))
+
