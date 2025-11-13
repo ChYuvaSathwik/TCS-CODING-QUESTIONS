@@ -1,0 +1,12 @@
+def reduce_string(N):
+    sathwik={}
+    m=[]
+    k=""
+    for i in N:
+        sathwik[i]=sathwik.get(i,0)+1
+    for f in sathwik:
+        print(f"{f}{sathwik[f]}",end="")
+N=input()
+M=reduce_string(N)
+
+"""hi bro"""
