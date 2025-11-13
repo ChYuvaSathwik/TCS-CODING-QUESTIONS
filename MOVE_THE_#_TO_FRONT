@@ -1,0 +1,19 @@
+def hastags_front(sathwik):
+    Praneeth=[]
+    count1=0
+    B=[]
+    for i in sathwik:
+        if i!="#":
+            Praneeth.append(i)
+        else:
+            count1=count1+1
+    for h in range(count1):
+        B.append("#")
+    XZ=B+Praneeth
+    return "".join(XZ)
+sathwik=input()
+print(hastags_front(sathwik))
+
+
+
+"""HI BRO IT IS ACCENTURE QUESTION,CAPGEM"""
