@@ -1,0 +1,8 @@
+row,col=map(int,input().split())
+Sathwik=[]
+for i in range(row):
+    M=list(map(int,input().split()))
+    Sathwik.append(M)
+for vb in Sathwik:
+    for pl in vb:
+        print(pl,end=" ")
