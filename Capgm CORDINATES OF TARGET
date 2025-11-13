@@ -1,0 +1,17 @@
+row,column=map(int,input().split())
+target=3
+sathwik=[]
+cordinate_row = 0
+for i in range(row):
+    f=list(map(int,input().split()))
+    sathwik.append(f)
+for j in sathwik:
+    mini_col=0
+    for k in j:
+        if target==k:
+            print((cordinate_row,mini_col))
+            break
+        else:
+            mini_col=mini_col+1
+    cordinate_row=cordinate_row+1
+
