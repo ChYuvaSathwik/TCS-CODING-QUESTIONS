@@ -1,0 +1,6 @@
+def second_largest(N,arr):
+    sathwik=sorted(arr,reverse=True)
+    return sathwik[1]
+N=int(input())
+arr=list(map(int,input().split()))
+print(second_largest(N,arr))
