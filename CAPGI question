@@ -1,0 +1,27 @@
+def occurnce_number(size, arr, search, repeat):
+    sathwik = {}
+    M = False
+    for i in arr:
+        sathwik[i] = sathwik.get(i, 0) + 1
+    if sathwik[search] == repeat:"""if sathwik.get(search, 0) == repeat:""" better to use this it will not crash the program
+
+        M = True
+    else:
+        M=False
+        return -1
+    if M:
+        count1 = 0
+        repeat1=0
+        while repeat1<repeat:
+            for j in arr:
+                if j==search:
+                    repeat1=repeat1+1
+                    count1=count1+1
+                else:
+                    count1=count1+1
+        return count1-1
+size=int(input())
+arr=list(map(int,input().split()))
+search=int(input())
+repeat=int(input())
+print(occurnce_number(size,arr,search, repeat))
