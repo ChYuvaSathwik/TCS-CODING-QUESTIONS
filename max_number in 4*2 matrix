@@ -1,0 +1,12 @@
+row,column=map(int,input().split())
+sathwik=[]
+Z=float("-inf")
+for i in range(row):
+    f=list(map(int,input().split()))
+    sathwik.append(f)
+for j in sathwik:
+    for k in j:
+        if k>Z:
+            Z=k
+print(Z)
+
