@@ -1,0 +1,9 @@
+def climbing_stairs(N,M):
+    count1=0
+    A=N//M
+    count1=count1+A
+    A1=N%M
+    count1=count1+A1
+    return count1
+N,M=map(int,input().split())
+print(climbing_stairs(N,M))
