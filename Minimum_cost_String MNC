@@ -1,0 +1,30 @@
+def Minimum_cost_String(S):
+    vowels="aeiou"
+    Con=10
+    min_number=[]
+    M=set(S)
+    if len(M)==1 and S in vowels:
+        return -1
+    else:
+        for j in range(len(vowels)):
+            Count1=0
+            Selected_vowel=0
+            Final1=0
+            for g in range(len(S)):
+                if vowels[j]==S[g]:
+                    Selected_vowel=Selected_vowel+0
+                elif  S[g] not in vowels:
+                    Count1=Con+Count1
+                else:
+                    Count1=Count1+abs(ord(vowels[j])-ord(S[g]))
+            Final1=Selected_vowel+Count1
+            min_number.append(Final1)
+        return min(min_number)
+S=input()
+print(Minimum_cost_String(S))
+
+
+
+
+
+
