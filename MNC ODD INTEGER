@@ -1,0 +1,8 @@
+def odd_Integers(N):
+    sathwik=0
+    for i in N:
+        if i%2==1:
+            sathwik=sathwik+i
+    return sathwik
+N=list(map(int,input().split()))
+print(odd_Integers(N))
