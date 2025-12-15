@@ -1,0 +1,11 @@
+def Largest_Pair_sum(N):
+    Big=[]
+    for i in range(len(N)):
+        for j in range(len(N)):
+            if N[i]!=N[j]:
+                count1=N[i]+N[j]
+                Big.append(count1)
+    return max(Big)
+N=list(map(int,input().split()))
+print(Largest_Pair_sum(N))
+
