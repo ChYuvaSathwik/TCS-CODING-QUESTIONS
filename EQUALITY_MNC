@@ -1,0 +1,20 @@
+def equality_marks(N,M):
+    sathwik=list(set(M))
+    sorted_1=sorted(sathwik,reverse=True)
+    count1=0
+    count2=0
+    Topper1=sorted_1[0]
+    Topper2=sorted_1[1]
+    Praneeth={}
+    for i in M:
+        Praneeth[i]=Praneeth.get(i,0)+1
+    for h in Praneeth:
+        if Praneeth[Topper1]>1:
+            count1=abs(1-Praneeth[Topper1])
+        if Praneeth[Topper2]>1:
+            count2=abs(1-Praneeth[Topper2])
+    return count1+count2
+N=int(input())
+M=list(map(int,input().split()))
+print(equality_marks(N,M))
+
