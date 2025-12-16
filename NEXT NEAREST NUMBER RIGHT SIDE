@@ -1,0 +1,15 @@
+def nearest_smallest_number(N):
+    sathwik=[]
+    for i in range(len(N)):
+        B=False
+        for j in range(i+1,len(N)):
+            if N[i]>N[j]:
+                sathwik.append(N[j])
+                B=True
+                break
+        if not B:
+            sathwik.append(-1)
+    return sathwik
+N=list(map(int,input().split()))
+print(nearest_smallest_number(N))
+
