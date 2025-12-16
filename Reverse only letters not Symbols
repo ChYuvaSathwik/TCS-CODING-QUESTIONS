@@ -1,0 +1,19 @@
+def reverse_only_alpha(N):
+    M=list(N)
+    low=0
+    high=len(M)-1
+    if not M:
+        return None
+    else:
+        while low<=high:
+            if not M[low].isalpha():
+                low=low+1
+            elif not M[high].isalpha():
+                high=high-1
+            else:
+                M[low],M[high]=M[high],M[low]
+                low=low+1
+                high=high-1
+        return "".join(M)
+N=input()
+print(reverse_only_alpha(N))
