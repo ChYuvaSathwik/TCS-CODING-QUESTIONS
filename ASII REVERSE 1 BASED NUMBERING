@@ -1,0 +1,21 @@
+def reverse_ASII_VALUE_SUM(N):
+    sum1=0
+    alpha_dict = {
+        'A': 26, 'B': 25, 'C': 24, 'D': 23, 'E': 22, 'F': 21,
+        'G': 20, 'H': 19, 'I': 18, 'J': 17, 'K': 16, 'L': 15,
+        'M': 14, 'N': 13, 'O': 12, 'P': 11, 'Q': 10, 'R': 9,
+        'S': 8, 'T': 7, 'U': 6, 'V': 5, 'W': 4, 'X': 3,
+        'Y': 2, 'Z': 1
+    }
+    sathwik=[]
+    for j in N:
+        sathwik.append(alpha_dict[j])
+    for h in range(1,len(N)+1):
+        sum1=sum1+(h*sathwik[h-1])
+    return sum1
+N=input()
+print(reverse_ASII_VALUE_SUM(N))
+
+
+
+
