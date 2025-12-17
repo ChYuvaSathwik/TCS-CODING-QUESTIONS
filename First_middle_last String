@@ -1,0 +1,7 @@
+def first_middle_last(N):
+    sathwik=len(N)-2
+    M1=N[0]
+    M2=N[-1]
+    return f"{M1}{sathwik}{M2}"
+N=input()
+print(first_middle_last(N))
