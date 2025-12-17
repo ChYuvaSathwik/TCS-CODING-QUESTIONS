@@ -1,0 +1,11 @@
+def Tree_Height(N):
+    H = []
+    for i in range(N):
+        Feet,Inches=input().split()
+        Feet=int(Feet)
+        Inches=int(Inches)
+        B=(12*Feet)+Inches
+        H.append(B)
+    return max(H)
+N=int(input())
+print(Tree_Height(N))
