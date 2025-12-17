@@ -1,0 +1,21 @@
+def special_string(N):
+    New = []
+    for i in range(N):
+        Praneeth=False
+        m=input()
+        B=m[0]
+        for k in range(0,len(m),2):
+            if m[k]==B:
+                Praneeth=True
+            else:
+                New.append(0)
+                Praneeth=False
+                break
+        if Praneeth:
+            New.append(1)
+    for h in New:
+        print(h)
+N=int(input())
+special_string(N)
+
+
