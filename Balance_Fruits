@@ -1,0 +1,13 @@
+def balance_fruits(A,M,R):
+    if A>M:
+        B1=(A-M)
+        R=R-B1
+        return R
+    elif A<M:
+        C1=(M-A)
+        R=R-C1
+        return R
+    else:
+        return R
+A,M,R=map(int,input().split())
+print(balance_fruits(A,M,R))
