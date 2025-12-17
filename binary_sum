@@ -1,0 +1,10 @@
+def binary_sum(N):
+    m=bin(N)
+    m=str(m)
+    sum1=0
+    V=m[2:]
+    for i in V:
+        sum1=sum1+int(i)
+    return sum1
+N=int(input())
+print(binary_sum(N))
