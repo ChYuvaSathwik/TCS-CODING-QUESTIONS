@@ -1,0 +1,8 @@
+def left_rotated(size,array,rotate):
+    sathwik=size%rotate
+    Praneeth=array[sathwik:]+array[:sathwik]
+    return Praneeth
+size=int(input())
+array=list(map(int,input().split()))
+rotate=int(input())
+print(left_rotated(size, array, rotate))
