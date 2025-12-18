@@ -1,0 +1,11 @@
+def sum_of_digits_Interwal(N,M):
+    sum1=0
+    for i in range(N,M+1):
+        G=str(i)
+        for j in G:
+            sum1=sum1+int(j)
+    return sum1
+N,M=map(int,input().split())
+print(sum_of_digits_Interwal(N,M))
+
+
