@@ -1,0 +1,9 @@
+def number_of_times_Integers(N,Array):
+    sathwik={}
+    for i in Array:
+        sathwik[i]=sathwik.get(i,0)+1
+    for j in sathwik:
+        print(f"{j} Occurs {sathwik[j]} times")
+N=int(input())
+Array=list(map(int,input().split()))
+number_of_times_Integers(N,Array)
