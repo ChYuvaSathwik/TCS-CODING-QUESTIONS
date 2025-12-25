@@ -1,0 +1,9 @@
+def Factors_of_Number(N):
+    sathwik=[]
+    for i in range(1,N+1):
+        if N%i==0:
+            sathwik.append(i)
+    return sathwik
+N=int(input())
+result=Factors_of_Number(N)
+print(" ".join(map(str,result)))
