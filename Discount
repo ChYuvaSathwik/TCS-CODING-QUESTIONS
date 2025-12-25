@@ -1,0 +1,35 @@
+def discount(N):
+    sathwik=[]
+    Z=""
+    g=float("inf")
+    for i in range(N):
+        Product,Money,Discount=input().split()
+        Money=int(Money)
+        Discount=int(Discount)
+        Discount_Money=(Money*Discount)//100
+        sathwik.append((Product,Discount_Money))
+    for k,l in sathwik:
+        if l<g:
+            g=l
+            Z=k
+    return Z
+N=int(input())
+print(discount(N))
+
+
+def discount(N):
+    sathwik = []
+
+    for i in range(N):
+        Product, Money, Discount = input().split()
+        Money = int(Money)
+        Discount = int(Discount)
+        Discount_Money = (Money * Discount) // 100
+        sathwik.append((Product, Discount_Money))
+
+    sathwik = sorted(sathwik, key=lambda x: x[1])
+
+    return sathwik[0][0]  
+
+N = int(input())
+print(discount(N))
