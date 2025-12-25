@@ -1,0 +1,13 @@
+def Spirl_Matrix(R,C):
+    Praneeth=[]
+    for j in sathwik:
+        for k in j:
+            Praneeth.append(k)
+    print(*Praneeth)
+R,C=map(int,input().split())
+sathwik=[]
+for h in range(R):
+    R=list(map(int,input().split()))
+    sathwik.append(R)
+
+Spirl_Matrix(R,C)
