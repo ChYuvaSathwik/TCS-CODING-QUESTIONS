@@ -1,0 +1,10 @@
+def car_bike_tyres(N):
+    C=4
+    B=2
+    for i in range(N):
+        Car,Bike=input().split()
+        Car=int(Car)
+        Bike=int(Bike)
+        print((Car*C)+(Bike*B))
+N=int(input())
+car_bike_tyres(N)
