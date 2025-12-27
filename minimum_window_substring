@@ -1,0 +1,33 @@
+def minimum_window_substring(N, M):
+    ok = []
+    v = ""   
+
+    for i in range(len(N) - len(M) + 1):
+        for j in range(i + len(M), len(N) + 1):
+            sathwik = N[i:j]
+
+            Balu = {}
+            for ch in M:
+                Balu[ch] = Balu.get(ch, 0) + 1
+
+            Cute = True
+            for bn in Balu:
+         
+                if sathwik.count(bn) < Balu[bn]:
+                    Cute = False
+                    break
+
+            if Cute:
+                ok.append(sathwik)
+
+    # find minimum length substring
+    for c in ok:
+        if v == "" or len(c) < len(v):
+            v = c
+
+    return v
+
+
+N = input()
+M = input()
+print(minimum_window_substring(N, M))
