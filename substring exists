@@ -1,0 +1,15 @@
+def substring_exits(N,M):
+    sathwik=False
+    for i in M:
+        if i in N:
+            sathwik=True
+        else:
+            sathwik=False
+            break
+    if sathwik:
+        return True
+    else:
+        return False
+N=input()
+M=input()
+print(substring_exits(N,M))
