@@ -1,0 +1,27 @@
+def number_occurence_substring(N,M):
+    count1=0
+    Praneeth=len(M)
+    for i in range(len(N)):
+        sathwik=N[i:Praneeth+i]
+        if sathwik==M:
+            count1=count1+1
+    return count1
+N=input()
+M=input()
+print(number_occurence_substring(N,M))
+
+
+
+def count_substring_occurrence(s, sub):
+    count = 0
+    sub_len = len(sub)
+
+    for i in range(len(s) - sub_len + 1):
+        if s[i:i + sub_len] == sub:
+            count += 1
+
+    return count
+
+s = input()
+sub = input()
+print(count_substring_occurrence(s, sub))
