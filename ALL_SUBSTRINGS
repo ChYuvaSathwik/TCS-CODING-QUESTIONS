@@ -1,0 +1,7 @@
+def ALL_SUBSTRINGS(N):
+    for i in range(len(N)):
+        for j in range(i+1,len(N)+1):
+            sathwik=N[i:j]
+            print(sathwik)
+N=input()
+ALL_SUBSTRINGS(N)
