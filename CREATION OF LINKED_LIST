@@ -1,0 +1,27 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class SingleLinkedList:
+    def __init(self):
+        self.head=None
+
+    def display(self):
+        temp=self.head
+        if self.head is None:
+            print("Linked List empty")
+        else:
+            while temp:
+                print(temp.data,end="-->")
+                temp=temp.next
+L1=SingleLinkedList()
+N1=Node(10)
+L1.head=N1
+N2=Node(20)
+N1.next=N2
+N3=Node(30)
+N2.next=N3
+N4=Node(40)
+N3.next=N4
+L1.display()
+
