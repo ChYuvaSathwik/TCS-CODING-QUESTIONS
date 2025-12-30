@@ -1,0 +1,9 @@
+M=["hello","hello","hello","hello","word","word","word","ok","ok"]
+sathwik={}
+for i in M:
+    sathwik[i]=sathwik.get(i,0)+1
+V=sorted(sathwik.items(),key=lambda x:x[1],reverse=True)
+if len(V)>=2:
+    Second_highest_word,count_of_word=V[1]
+print(Second_highest_word,"-->",count_of_word)
+
