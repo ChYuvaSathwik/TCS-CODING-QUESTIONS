@@ -1,0 +1,50 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class SingleLinkedList:
+    def __init__(self):
+        self.head=None
+    def insert_begin(self,data):
+        ib=Node(data)
+        ib.next=self.head
+        self.head=ib
+    def insert_end(self,data):
+        ie=Node(data)
+        temp=self.head
+        while temp.next:
+            temp=temp.next
+        temp.next=ie
+    def desired_postion(self,pos,data):
+        dp=Node(data)
+        temp=self.head
+        for i in range(pos-1):
+            temp=temp.next
+        dp.data=data
+        dp.next=temp.next
+        temp.next=dp
+    def display(self):
+        temp=self.head
+        if self.head is None:
+            print("Empty linkedlist")
+        else:
+            while temp:
+                print(temp.data,end="->")
+                temp=temp.next
+L=SingleLinkedList()
+N1=Node(10)
+L.head=N1
+N2=Node(20)
+N1.next=N2
+N3=Node(30)
+N2.next=N3
+N4=Node(40)
+N3.next=N4
+N5=Node(50)
+N4.next=N5
+N6=Node(60)
+N5.next=N6
+L.insert_begin(1)
+L.insert_end(2)
+L.desired_postion(3,3)
+L.display()
