@@ -1,0 +1,52 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class LinkedList:
+    def __init__(self):
+        self.data=None
+    def delete_begin(self):
+        temp=self.head
+        self.head=temp.next
+        temp=None
+    def delete_end(self):
+        temp=self.head.next
+        prev=self.head
+        while temp.next is not None:
+            temp=temp.next
+            prev=prev.next
+        prev.next=None
+    def delete_desired_postion(self,pos):
+        temp=self.head.next
+        prev=self.head
+        for i in range(pos-2):
+            temp=temp.next
+            prev=prev.next
+        prev.next=temp.next
+        temp.next=None
+    def display(self):
+        temp=self.head
+        if self.head is None:
+            print("Linked List is Empty")
+        else:
+            while temp:
+                print(temp.data,end="->")
+                temp=temp.next
+L=LinkedList()
+N1=Node(10)
+L.head=N1
+N2=Node(20)
+N1.next=N2
+N3=Node(30)
+N2.next=N3
+N4=Node(40)
+N3.next=N4
+N5=Node(50)
+N4.next=N5
+N6=Node(60)
+N5.next=N6
+L.delete_desired_postion(4)
+L.display()
+
+
+
